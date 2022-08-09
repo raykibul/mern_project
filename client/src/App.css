@@ -1,0 +1,29 @@
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+button {
+  width: 100px;
+  height: 35px;
+  font-size: 12px;
+  margin: 5px;
+}
+
+input {
+  width: 250px;
+  height: 30px;
+  font-size: 20px;
+  margin: 5px;
+}
+
+table {
+  width: 100%;
+  border: 2px solid forestgreen;
+}
+
+tr {
+  border: 2px solid forestgreen;
+}

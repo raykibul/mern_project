@@ -1,0 +1,33 @@
+version: "3"
+services:
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile.dev
+    ports:
+      - 3000:3000
+    container_name: client
+    networks:
+      - mern_project
+    volumes:
+      - ./client:/app
+    depends_on:
+      - server
+    stdin_open: true
+    tty: true
+
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile.dev
+    ports:
+      - 3001:3001
+    container_name: server
+    networks:
+      - mern_project
+    volumes:
+      - ./server:/app
+
+networks:
+  mern_project:
+    driver: bridge
